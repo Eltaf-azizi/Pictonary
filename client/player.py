@@ -1,20 +1,18 @@
 """
-Represent the player(s) in each game
+Represents the player(s) in each game
 """
+
 
 class Player(object):
     def __init__(self, name):
         self.name = name
         self.score = 0
 
-    
-    def updatescore(self, x):
+    def update_score(self, x):
         self.score += x
 
-
-    def getscore(self):
+    def get_score(self):
         return self.score
-    
 
-    def getname(self):
+    def get_name(self):
         return self.name

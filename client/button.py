@@ -1,23 +1,26 @@
+"""
+Stores interface for button and two concrete button classes
+to be used in the UI.
+"""
 import pygame
 
 
 class Button:
 
-    def __init__(self, x, y, width, height, color, bordercolor=(0, 0, 0)):
+    def __init__(self, x, y, width, height, color, border_color=(0,0,0)):
         self.x = x
-        self.x = y
-        self.WIDTH = width
-        self.HEIGHT = height
+        self.y = y
+        self.height = height
+        self.width = width
         self.color = color
-        self.bordercolor = bordercolor
-        self.BORDERWIDTH = 2
-
+        self.border_color = border_color
+        self.BORDER_WIDTH = 2
 
     def draw(self, win):
-        pygame.draw.rect(win, self.bordercolor, (self.x, self.y, self.width, self.height), 0)
-        pygame.draw.rect(win, self.color, (self.x + self.BORDERWIDTH, self.y + self.BORDERWIDTH,self.width - self.BORDERWIDTH*2, self.height - self.BORDERWIDTH* 2), 0)
-        
-
+        pygame.draw.rect(win, self.border_color, (self.x, self.y, self.width, self.height), 0)
+        pygame.draw.rect(win, self.color, (
+        self.x + self.BORDER_WIDTH, self.y + self.BORDER_WIDTH, self.width - self.BORDER_WIDTH * 2,
+        self.height - self.BORDER_WIDTH * 2), 0)
 
     def click(self, x, y):
         """
@@ -28,25 +31,25 @@ class Button:
         """
 
         if self.x <= x <= self.x + self.width and self.y <= y <= self.y + self.height:
-            return True # user clicked button
+            return True  # user clicked button
 
         return False
-    
 
-class TextButton():
-    def __init__(self, x, y, width, height, color, text, bordercolor=(0, 0, 0)):
-        super().__init__(x, y, width, height, color, bordercolor)
+
+class TextButton(Button):
+    def __init__(self, x, y, width, height, color, text, border_color=(0,0,0)):
+        super().__init__(x, y, width, height, color, border_color)
         self.text = text
-        self.textfont = pygame.font.SysFont("comicsans", 30)
+        self.text_font = pygame.font.SysFont("comicsans", 30)
 
-
-    def changefontsize(self, size):
-        self.textfont = pygame.font.SysFont("comicsans", size)
-
+    def change_font_size(self, size):
+        self.text_font = pygame.font.SysFont("comicsans", size)
 
     def draw(self, win):
         super().draw(win)
-        txt = self.textfont.render(self.text, 1, (0, 0, 0))
+        txt = self.text_font.render(self.text, 1, (0,0,0))
         win.blit(txt, (self.x + self.width/2 - txt.get_width()/2, self.y + self.height/2 - txt.get_height()/2))
+
+
 
 

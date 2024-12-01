@@ -2,8 +2,9 @@
 Handles operations related to game and connections
 between player, board, chat, and round
 """
-from board import Board
 import random
+from board import Board
+from round import Round
 
 class Game(object):
 

@@ -40,3 +40,12 @@ python client.py
 
 ⚠️ Start the server first, then connect multiple clients.
 
+## 🎯 How to Play
+
+ 1. Start the server.
+ 2. Players join by running the client.
+ 3. One player is chosen to draw.
+ 4. Other players try to guess the word by typing.
+ 5. Points are awarded for correct guesses.
+
+

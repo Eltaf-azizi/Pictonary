@@ -49,3 +49,12 @@ python client.py
  5. Points are awarded for correct guesses.
 
 
+## 🔮 Future Improvements
+
+ - ✅ Add scoring system with leaderboard.
+ - ✅ Add timer for rounds.
+ - ✅ Add word selection screen.
+ - ✅ Improve UI/UX with colors and brush tools.
+ - ✅ Add chat system for better communication.
+
+

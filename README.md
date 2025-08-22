@@ -58,3 +58,7 @@ python client.py
  - ✅ Add chat system for better communication.
 
 
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repo and submit a pull request with improvements or new features.
+

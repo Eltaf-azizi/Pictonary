@@ -16,3 +16,27 @@
  - Sockets – For real-time communication between players.
  - Networking – To enable multiplayer functionality.
  - Pygame – For GUI and drawing board.
+
+## ⚡ Installation & Setup
+#### 1. Clone the repository
+```
+git clone https://github.com/yourusername/pictionary-game.git
+cd pictionary-game
+```
+#### 2. Install dependencies
+
+Make sure you have Python 3.8+ installed. Then install required modules:
+```
+pip install pygame
+```
+#### 3. Run the server
+```
+python server.py
+```
+#### 4. Run the client(s)
+```
+python client.py
+```
+
+⚠️ Start the server first, then connect multiple clients.
+
